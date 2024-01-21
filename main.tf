@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "gcs-secret-key"
+    bucket  = "kbot-tf-state"
     prefix  = "terraform/state"
   }
 }
