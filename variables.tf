@@ -22,9 +22,8 @@ variable "GITHUB_TOKEN" {
 }
 
 variable "FLUX_GITHUB_REPO" {
-  type        = string
-  #default     = "./modules/flux_bootstrap/"
-  default     = "github.com/den-vasyliev/tf-fluxcd-flux-bootstrap?ref=kind_auth"
+  type    = string
+  default = "./modules/flux_bootstrap/"
   description = "Flux GitOps repository"
 }
 
