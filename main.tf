@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "kbot-tf-state"
-    prefix  = "terraform/state"
+    bucket = "kbot-tf-state"
+    prefix = "terraform/state"
   }
 }
 
@@ -15,11 +15,10 @@ module "github_repository" {
 }
 
 module "tls_private_key" {
-  source    = "github.com/setiuss/tf-hashicorp-tls-keys"
+  source    = "github.com/den-vasyliev/tf-hashicorp-tls-keys"
   algorithm = "RSA"
 }
 
-# Source: "github.com/den-vasyliev/tf-kind-cluster?ref=cert_auth"
 module "kind_cluster" {
   source = "github.com/den-vasyliev/tf-kind-cluster?ref=cert_auth"
 }
