@@ -1,6 +1,5 @@
 variable "GOOGLE_PROJECT" {
   type        = string
-  default     = "k8s-k3s-405618"
   description = "GCP project to use"
 }
 
@@ -12,7 +11,6 @@ variable "GOOGLE_REGION" {
 
 variable "GITHUB_OWNER" {
   type        = string
-  default     = "setiuss"
   description = "GitHub owner repository to use"
 }
 
@@ -22,8 +20,8 @@ variable "GITHUB_TOKEN" {
 }
 
 variable "FLUX_GITHUB_REPO" {
-  type    = string
-  default = "./modules/flux_bootstrap/"
+  type        = string
+  default     = "flux-gitops"
   description = "Flux GitOps repository"
 }
 
